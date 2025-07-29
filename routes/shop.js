@@ -13,8 +13,11 @@ router.get("/", (req, res, next) => {
   // // Which is not what anyone would want...
   // res.sendFile(path.join(rootDir, "views", "shop.html"));
 
+  const products = adminData.products;
+
   //? Using the default template engine that we set
-  res.render("shop");
+  // Passing the data ie products by binding it to a key in the render method
+  res.render("shop", { prods: products, docTitle: "Shop" });
 });
 
 module.exports = router;
