@@ -7,7 +7,12 @@ const rootDir = require("../util/path");
 const router = express.Router();
 
 const products = [];
-
+/**
+ * # A template engine in Node.js allows for the rendering of dynamic content on the server-side by combining static HTML templates with dynamic data.
+ * # Instead of sending raw HTML, the server processes templates that contain placeholders or logic for data injection,
+ * # resulting in a fully rendered HTML page sent to the client.
+ * -> Examples: EJS, Pug (Jade), Handlebars
+ */
 // /admin/add-product => GET
 router.get("/add-product", (req, res, next) => {
   res.sendFile(path.join(rootDir, "views", "add-product.html"));
