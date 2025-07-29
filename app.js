@@ -5,6 +5,11 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+// Letting express.js use our Pug templating engine
+app.set("view engine", "pug");
+// The template is available in views. Check docs.
+app.set("views", "views");
+
 const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
