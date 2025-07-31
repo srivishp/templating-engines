@@ -1,19 +1,6 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Page Not Found
-        link(rel="stylesheet", href="/css/main.css")
-        link(rel="stylesheet", href="/css/forms.css")
-        link(rel="stylesheet", href="/css/product.css")
-    body
-        header.main-header
-            nav.main-header__nav
-                ul.main-header__item-list
-                    li.main-header__item
-                        a(href="/") Shop
-                    li.main-header__item
-                        a.active(href="/admin/add-product") Add Product
+//- Extending the layout
+extends layouts/main-layout.pug
 
-        h1 Page Not Found
+//- This hook will now allow us to add content
+block content
+    h1 Page Not Found
