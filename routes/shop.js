@@ -17,7 +17,12 @@ router.get("/", (req, res, next) => {
 
   //? Using the default template engine that we set
   // Passing the data ie products by binding it to a key in the render method
-  res.render("shop", { prods: products, pageTitle: "Shop", path: "/" });
+  res.render("shop", {
+    prods: products,
+    pageTitle: "Shop",
+    path: "/",
+    hasProducts: products.length > 0,
+  });
 });
 
 module.exports = router;

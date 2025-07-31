@@ -2,11 +2,20 @@ const path = require("path");
 
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const expressHbs = require("express-handlebars");
 const app = express();
 
-// Letting express.js use our Pug templating engine
-app.set("view engine", "pug");
+//Using Handlebars
+app.engine(
+  "hbs",
+  expressHbs.engine({
+    extname: "hbs",
+    defaultLayout: false,
+    layoutsDir: "views/layouts/",
+  })
+);
+// Letting express.js use our Handlebars templating engine
+app.set("view engine", "hbs");
 // The template is available in views. Check docs.
 app.set("views", "views");
 
