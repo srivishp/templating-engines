@@ -2,20 +2,10 @@ const path = require("path");
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const expressHbs = require("express-handlebars");
 const app = express();
 
-//Using Handlebars
-app.engine(
-  "hbs",
-  expressHbs.engine({
-    extname: "hbs",
-    defaultLayout: "main-layout",
-    layoutsDir: "views/layouts/",
-  })
-);
-// Letting express.js use our Handlebars templating engine
-app.set("view engine", "hbs");
+// Letting express.js use our EJS templating engine
+app.set("view engine", "ejs");
 // The template is available in views. Check docs.
 app.set("views", "views");
 
