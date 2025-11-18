@@ -11,7 +11,7 @@ app.set("views", "views");
 
 // # EJS does not support 'Layouts'
 // # So, we use 'includes' & 'Partials'
-// -> Check the docs for more info on the <% , <%= , <%- syntax
+// > Check the docs for more info on the <% , <%= , <%- syntax
 
 const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
